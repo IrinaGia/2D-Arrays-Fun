@@ -19,7 +19,7 @@
             Console.Write("Enter number of columns: ");
             int cols = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Insert number of the model: " + MODEL1 + ": filled with numbers. " + MODEL2 + ": filled with letters." + MODEL3 + ": a DJ.");
+            Console.WriteLine("Insert number of the model: " + MODEL1 + " - filled with numbers. " + MODEL2 + " - filled with letters. " + MODEL3 + " - filled with DJ-moticon.");
             int modelChoice = int.Parse(Console.ReadLine());
 
             if (modelChoice == MODEL1)
