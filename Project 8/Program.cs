@@ -49,8 +49,8 @@
             if (modelChoice == MODEL2)
             {
                 string[] letters = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
-                Random random1 = new Random();
-                int randomIndex = random1.Next(letters.Length);
+                Random random2 = new Random();
+                int randomIndex = random2.Next(letters.Length);
                 string randomLetter = letters[randomIndex];
                 string[,] array2 = new string[rows, cols];
                 Random rand = new Random();
