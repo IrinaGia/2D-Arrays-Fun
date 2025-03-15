@@ -52,7 +52,6 @@
                 string[] letters = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
                 Random model2_random = new Random();
                 int randomIndex = model2_random.Next(letters.Length);
-                string randomLetter = letters[randomIndex];
                 string[,] model2_array = new string[rows, cols];
                 Random letters_rand = new Random();
 
