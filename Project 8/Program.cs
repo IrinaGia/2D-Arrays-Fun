@@ -7,10 +7,10 @@
             const int MODEL1 = 1;
             const int MODEL2 = 2;
             const int MODEL3 = 3;
-            const int LOWEST_RANDOM = 1;
-            const int UPPER_RANDOM = 101;
+            const int MODEL1_LOWEST_RANDOM = 1;
+            const int MODEL1_UPPER_RANDOM = 101;
 
-            Random random = new Random();
+            
 
             // Ask the user for the number of rows and columns
             Console.Write("Enter number of rows: ");
@@ -25,14 +25,15 @@
             if (modelChoice == MODEL1)
             {
                 // 2D array with user-defined size
-                int[,] array1 = new int[rows, cols];
+                Random model1_random = new Random();
+                int[,] model1_array = new int[rows, cols];
 
                 // Fill the array automatically with random numbers (from 1 till 100)
                 for (int i = 0; i < rows; i++)
                 {
                     for (int j = 0; j < cols; j++)
                     {
-                        array1[i, j] = random.Next(LOWEST_RANDOM, UPPER_RANDOM); // inserts random value between 1 and 100
+                        model1_array[i, j] = model1_random.Next(MODEL1_LOWEST_RANDOM, MODEL1_UPPER_RANDOM); // inserts random value between 1 and 100
                     }
                 }
 
@@ -41,7 +42,7 @@
                 {
                     for (int j = 0; j < cols; j++)
                     {
-                        Console.Write(array1[i, j] + "\t");  // spaces for easy reading
+                        Console.Write(model1_array[i, j] + "\t");  // spaces for easy reading
                     }
                     Console.WriteLine();
                 }
@@ -49,17 +50,17 @@
             if (modelChoice == MODEL2)
             {
                 string[] letters = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
-                Random random2 = new Random();
-                int randomIndex = random2.Next(letters.Length);
+                Random model2_random = new Random();
+                int randomIndex = model2_random.Next(letters.Length);
                 string randomLetter = letters[randomIndex];
-                string[,] array2 = new string[rows, cols];
-                Random rand = new Random();
+                string[,] model2_array = new string[rows, cols];
+                Random letters_rand = new Random();
 
                 for (int i = 0; i < rows; i++)
                 {
                     for (int j = 0; j < cols; j++)
                     {
-                        array2[i, j] = letters[rand.Next(letters.Length)];
+                        model2_array[i, j] = letters[letters_rand.Next(letters.Length)];
                     }
                 }
                 
@@ -68,7 +69,7 @@
                 {
                     for (int j = 0; j < cols; j++)
                     {
-                        Console.Write(array2[i, j] + " ");
+                        Console.Write(model2_array[i, j] + " ");
                     }
                     Console.WriteLine();
                 }
@@ -76,12 +77,12 @@
             if (modelChoice == MODEL3)
             {
                 string DJ = "..d-_-b..";
-                string[,] array3 = new string[rows, cols];
+                string[,] model3_array = new string[rows, cols];
                 for (int i = 0; i < rows; i++)
                 {
                     for (int j = 0; j < cols; j++)
                     {
-                        array3[i, j] = DJ;
+                        model3_array[i, j] = DJ;
                     }
                 }
 
@@ -90,7 +91,7 @@
                 {
                     for (int j = 0; j < cols; j++)
                     {
-                        Console.Write(array3[i, j] + " ");
+                        Console.Write(model3_array[i, j] + " ");
                     }
                     Console.WriteLine();
                 }
